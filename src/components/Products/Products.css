@@ -1,0 +1,10 @@
+#products {
+  width: 100%;
+}
+.product_grid {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
