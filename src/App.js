@@ -4,16 +4,15 @@ import Nav from './components/Navbar/Nav'
 import Products from './components/Products/Products'
 import { commerce } from './lib/commerce'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import SingleProduct from './components/SingleProduct/SingleProduct'
 
 const App = () => {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState({})
-
   const fetchProducts = async () => {
     const { data } = await commerce.products.list()
     setProducts(data)
   }
-
   const fetchCart = async () => {
     const cart = await commerce.cart.retrieve()
     setCart(cart)
@@ -39,6 +38,7 @@ const App = () => {
     fetchProducts()
     fetchCart()
   }, [])
+
   return (
     <div>
       <Router>
@@ -50,6 +50,16 @@ const App = () => {
               <Products products={products} onAddToCart={handleAddToCart} />
             }
           />
+          <Route
+            path="/product/:id"
+            element={
+              <SingleProduct
+                products={products}
+                onAddToCart={handleAddToCart}
+              />
+            }
+          />
+
           <Route
             path="/cart"
             element={

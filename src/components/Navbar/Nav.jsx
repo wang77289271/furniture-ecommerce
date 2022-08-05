@@ -17,7 +17,7 @@ const Nav = ({ totalItems }) => {
         </div>
 
         <div className="nav_right">
-          {location.pathname === '/' && (
+          {location.pathname === '/cart' || (
             <Link to="/cart">
               <div className="nav_cart">
                 <svg

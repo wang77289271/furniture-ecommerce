@@ -1,0 +1,25 @@
+.single_product_container {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+.single_product {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+.single_product_left {
+  flex: 1;
+}
+.single_product_left .single_product_img {
+  width: 100%;
+  min-height: 600px;
+  max-height: 800px;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+}
+.single_product_right {
+  flex: 1;
+}
