@@ -5,6 +5,7 @@ import Products from './components/Products/Products'
 import { commerce } from './lib/commerce'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import SingleProduct from './components/SingleProduct/SingleProduct'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   const [products, setProducts] = useState([])
@@ -82,6 +83,7 @@ const App = () => {
             }
           />
         </Routes>
+        <Footer />
       </Router>
     </div>
   )

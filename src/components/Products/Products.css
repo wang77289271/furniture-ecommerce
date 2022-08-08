@@ -1,12 +1,13 @@
 #products {
   width: 100%;
+  padding: 5rem 0;
 }
 .product_grid {
-  width: 80%;
+  width: 90%;
   margin: auto;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 10px;
+  gap: 18px;
 }
 .product_header {
   width: 100%;
