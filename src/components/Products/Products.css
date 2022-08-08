@@ -8,3 +8,9 @@
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
 }
+.product_header {
+  width: 100%;
+}
+.product_intro {
+  width: 100%;
+}

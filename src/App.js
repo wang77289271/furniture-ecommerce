@@ -9,6 +9,7 @@ import SingleProduct from './components/SingleProduct/SingleProduct'
 const App = () => {
   const [products, setProducts] = useState([])
   const [cart, setCart] = useState({})
+  const [banner, setBanner] = useState({})
   const fetchProducts = async () => {
     const { data } = await commerce.products.list()
     setProducts(data)
@@ -16,6 +17,10 @@ const App = () => {
   const fetchCart = async () => {
     const cart = await commerce.cart.retrieve()
     setCart(cart)
+  }
+  const fetchBanner = async () => {
+    const banner = await commerce.categories.list()
+    setBanner(banner)
   }
   const handleAddToCart = async (productId, quantity) => {
     const item = await commerce.cart.add(productId, quantity)
@@ -37,6 +42,7 @@ const App = () => {
   useEffect(() => {
     fetchProducts()
     fetchCart()
+    fetchBanner()
   }, [])
 
   return (
@@ -47,7 +53,11 @@ const App = () => {
           <Route
             path="/"
             element={
-              <Products products={products} onAddToCart={handleAddToCart} />
+              <Products
+                products={products}
+                banner={banner}
+                onAddToCart={handleAddToCart}
+              />
             }
           />
           <Route

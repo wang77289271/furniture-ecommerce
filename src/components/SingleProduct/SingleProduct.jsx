@@ -6,7 +6,7 @@ import './SingleProduct.css'
 
 const SingleProduct = ({ products, onAddToCart }) => {
   const { id } = useParams()
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
   const product = products.filter((x) => x.id === id)
   if (!product) {
     return 'Loading...'
@@ -34,7 +34,15 @@ const SingleProduct = ({ products, onAddToCart }) => {
                   dangerouslySetInnerHTML={{ __html: product[0].description }}
                 ></p> */}
                 <div className="single_product_btn">
-                  <button onClick={() => setCount(count - 1)}>
+                  <button
+                    onClick={() => {
+                      if (count === 1) {
+                        setCount(1)
+                      } else {
+                        setCount(count - 1)
+                      }
+                    }}
+                  >
                     <FontAwesomeIcon icon={faMinus} size="xs" />
                   </button>
                   <h4>{count}</h4>

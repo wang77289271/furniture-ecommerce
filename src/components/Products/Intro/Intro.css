@@ -1,0 +1,58 @@
+.intro_container {
+  width: 100%;
+}
+.intro {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  margin: 80px auto;
+}
+.intro_left {
+  flex: 1;
+  padding: 10px 0;
+}
+.intro_left h1 {
+  font-size: 50px;
+  font-weight: 700;
+  font-family: 'Roboto', sans-serif;
+  color: #585858;
+}
+.intro_left h2 {
+  font-size: 30px;
+  font-weight: 300;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.5px;
+  color: #585858;
+  padding: 5px 0;
+  line-height: 35px;
+}
+.intro_left p {
+  font-size: 16px;
+  font-weight: 300;
+  color: #585858;
+  letter-spacing: 1.2px;
+  line-height: 23px;
+  width: 90%;
+  padding: 5px 0;
+}
+.intro_btn {
+  margin-top: 70px;
+  margin-bottom: 8px;
+}
+.intro_btn a {
+  text-decoration: none;
+  color: #000;
+  padding: 8px 25px;
+  border: 2px solid #585858;
+}
+.intro_btn a:hover {
+  color: #ffffff;
+  background-color: #a4a400;
+  border-color: #a4a400;
+  transition: all 0.2s;
+}
+.intro_right {
+  flex: 1;
+  background-position: center;
+  background-size: cover;
+}
