@@ -1,0 +1,42 @@
+.cart_container {
+  width: 100%;
+  padding: 7rem 0;
+}
+.cart_wrapper {
+  width: 90%;
+  margin: auto;
+}
+.cart_wrapper h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 27px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+.cart_fill {
+  display: flex;
+  flex-direction: row;
+}
+.cart_fill_container {
+  flex: 2;
+}
+.cart_summary {
+  flex: 1;
+}
+.cart_items_remove_all button {
+  background: transparent;
+  border: 1px solid #585858;
+  padding: 8px 25px;
+  cursor: pointer;
+}
+.cart_items_remove_all button span {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.cart_items_remove_all button:hover {
+  background-color: rgb(196, 73, 73);
+  border-color: rgb(196, 73, 73);
+  color: #fff;
+  transition: all 0.2s;
+}
