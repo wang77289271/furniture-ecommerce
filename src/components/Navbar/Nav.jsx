@@ -12,7 +12,7 @@ const Nav = ({ totalItems }) => {
             <img src={logo} alt="Shopping e-commerce" />
           </Link>
           <Link to="/">
-            <h1>Furniture Shopping</h1>
+            <h1>yFurniture</h1>
           </Link>
         </div>
 
