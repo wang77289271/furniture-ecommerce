@@ -11,8 +11,8 @@ const Cart = ({
 }) => {
   const EmptyCart = () => (
     <div className="cart_empty">
+      <h1>You have no items in your shopping cart.</h1>
       <h1>
-        You have no items in your shopping cart.
         <Link to="/">Back to home page</Link>
       </h1>
     </div>

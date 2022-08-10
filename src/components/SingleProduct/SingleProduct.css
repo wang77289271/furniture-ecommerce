@@ -100,3 +100,15 @@
   font-weight: 300;
   letter-spacing: 0.3px;
 }
+@media only screen and (max-width: 800px) {
+  .single_product {
+    flex-direction: column;
+  }
+  .single_product_left .single_product_img {
+    height: 400px;
+    min-height: 400px;
+  }
+  .single_product_content {
+    margin-top: 2rem;
+  }
+}

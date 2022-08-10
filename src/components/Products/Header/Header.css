@@ -60,3 +60,34 @@
   text-shadow: 0px 0px 15px rgb(0, 0, 0, 0.8);
   letter-spacing: 1.2px;
 }
+
+@media only screen and (max-width: 600px) {
+  .header_main {
+    justify-content: center;
+  }
+  .header_content {
+    margin-right: 0;
+  }
+  .header_content h1 {
+    font-size: 100px;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .header_main {
+    justify-content: center;
+    margin: 0 10px;
+  }
+  .header_content {
+    margin-right: 0;
+  }
+  .header_content h1 {
+    font-size: 60px;
+  }
+  .header_content h2 {
+    font-size: 16px;
+  }
+  .header_content p {
+    font-size: 12px;
+    width: 90%;
+  }
+}
