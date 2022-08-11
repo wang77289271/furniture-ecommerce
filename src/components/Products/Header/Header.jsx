@@ -9,6 +9,7 @@ const Header = ({ banner }) => {
           id="header"
           style={{
             backgroundImage: `url(${banner.data[0].assets[0].url})`,
+            backgroundColor: '#a69500',
           }}
         >
           <div className="header_main">
