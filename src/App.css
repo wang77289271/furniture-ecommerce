@@ -1,0 +1,14 @@
+.loading_bubbles {
+  width: 100vw;
+  height: 100vh;
+  background-color: bisque;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.loading_bubbles h1 {
+  font-size: 18px;
+  font-weight: 500;
+  color: #222;
+}

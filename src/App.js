@@ -6,6 +6,8 @@ import { commerce } from './lib/commerce'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import SingleProduct from './components/SingleProduct/SingleProduct'
 import Footer from './components/Footer/Footer'
+import ReactLoading from 'react-loading'
+import './App.css'
 
 const App = () => {
   const [products, setProducts] = useState([])
@@ -48,43 +50,50 @@ const App = () => {
 
   return (
     <div>
-      <Router>
-        <Nav totalItems={cart.total_items} />
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Products
-                products={products}
-                banner={banner}
-                onAddToCart={handleAddToCart}
-              />
-            }
-          />
-          <Route
-            path="/product/:id"
-            element={
-              <SingleProduct
-                products={products}
-                onAddToCart={handleAddToCart}
-              />
-            }
-          />
+      {banner.data !== undefined ? (
+        <Router>
+          <Nav totalItems={cart.total_items} />
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Products
+                  products={products}
+                  banner={banner}
+                  onAddToCart={handleAddToCart}
+                />
+              }
+            />
+            <Route
+              path="/product/:id"
+              element={
+                <SingleProduct
+                  products={products}
+                  onAddToCart={handleAddToCart}
+                />
+              }
+            />
 
-          <Route
-            path="/cart"
-            element={
-              <Cart
-                cart={cart}
-                handleUpdateCartQty={handleUpdateCartQty}
-                handleRemoveFromCart={handleRemoveFromCart}
-                handleEmptyCart={handleEmptyCart}
-              />
-            }
-          />
-        </Routes>
-        <Footer />
-      </Router>
+            <Route
+              path="/cart"
+              element={
+                <Cart
+                  cart={cart}
+                  handleUpdateCartQty={handleUpdateCartQty}
+                  handleRemoveFromCart={handleRemoveFromCart}
+                  handleEmptyCart={handleEmptyCart}
+                />
+              }
+            />
+          </Routes>
+          <Footer />
+        </Router>
+      ) : (
+        <div className="loading_bubbles">
+          <ReactLoading type="bubbles" color="#222" />
+          <h1>Loading...</h1>
+        </div>
+      )}
     </div>
   )
 }
