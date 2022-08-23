@@ -1,4 +1,4 @@
-[Sample page](https://furniture.findyewang.com/).
+[Click here to see sample page](https://furniture.findyewang.com/)
 
 # Getting Started with Create React App
 
